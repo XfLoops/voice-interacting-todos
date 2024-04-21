@@ -8,7 +8,9 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build --force"
+    "type-check": "vue-tsc --build --force",
+    "deploy-local": "ditto dist ~/webroot/xfloops.local/vit",
+    "deploy-online": "scp -r dist/* $ESC_INSTANCE_ACCOUNT:/www/vit"
   },
   "dependencies": {
     "vue": "^3.4.21"
